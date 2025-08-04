@@ -12,20 +12,20 @@ def load_df():
 
 def test_ses_model_forecast():
     df = load_df()
-    cfg = Settings(14, 30, 3, ["SES"])
+    cfg = Settings(14, 30, 3, ["SES"], 7, {})
     result = SESModel(cfg).fit_forecast(df)
     assert len(result["forecast"]) == 3
 
 
 def test_des_model_forecast():
     df = load_df()
-    cfg = Settings(14, 30, 2, ["DES"])
+    cfg = Settings(14, 30, 2, ["DES"], 7, {})
     result = DESModel(cfg).fit_forecast(df)
     assert len(result["forecast"]) == 2
 
 
 def test_tes_model_forecast():
     df = load_df()
-    cfg = Settings(14, 30, 4, ["TES"])
+    cfg = Settings(14, 30, 4, ["TES"], 7, {"grocery": 7})
     result = TESModel(cfg).fit_forecast(df)
     assert len(result["forecast"]) == 4
