@@ -1,4 +1,4 @@
- from __future__ import annotations
+from __future__ import annotations
  
  import pandas as pd
  from sklearn.metrics import mean_absolute_percentage_error, mean_squared_error
@@ -43,5 +43,5 @@
          return {"name": self.name, "rmse": rmse, "mape": mape, "forecast": forecast}
  
  
- MODEL_REGISTRY[TESModel.name] = TESModel
+MODEL_REGISTRY[TESModel.name] = TESModel
 
