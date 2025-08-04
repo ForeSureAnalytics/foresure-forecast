@@ -1,6 +1,6 @@
 from __future__ import annotations
  
- import pandas as pd
+import pandas as pd
  from sklearn.metrics import mean_absolute_percentage_error, mean_squared_error
  from statsmodels.tsa.holtwinters import ExponentialSmoothing
  
@@ -41,6 +41,7 @@ from __future__ import annotations
              {"day_key": future_dates, "forecast_qty": forecast_vals}
          )
          return {"name": self.name, "rmse": rmse, "mape": mape, "forecast": forecast}
- 
+
+
 MODEL_REGISTRY[TESModel.name] = TESModel
 
