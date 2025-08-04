@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foresure-forecast"
+version = "0.1.0"
+description = "Modular forecasting package"
+authors = [{name = "Your Name"}]
+dependencies = [
+    "pandas",
+    "numpy",
+    "statsmodels",
+    "scikit-learn",
+    "typer",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
