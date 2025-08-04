@@ -1,9 +1,9 @@
 install:
-pip install -e .[dev]
+  pip install -e .[dev]
 
 format:
-black .
-ruff --fix .
+  black .
+  ruff --fix .
 
 test:
-pytest -q
+  pytest -q
