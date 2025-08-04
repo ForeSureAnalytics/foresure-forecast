@@ -6,6 +6,6 @@ from foresure_forecast.config.loader import Settings
 
 def test_clean_demand():
     df = pd.DataFrame({"qty_sold": [1, None]})
-    cfg = Settings(1, 1, 1, ["SES"])
+    cfg = Settings(1, 1, 1, ["SES"], 7, {})
     cleaned = clean_demand(df, cfg)
     assert cleaned["qty_sold"].isna().sum() == 0

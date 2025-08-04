@@ -2,3 +2,7 @@ lead_time_days: 14
 reorder_cycle_days: 30
 forecast_horizon_days: 90
 models_to_run: [SES, DES, TES]
+default_seasonal_period: 7
+category_seasonal_periods:
+  "ice cream": 12
+  "beer": 7

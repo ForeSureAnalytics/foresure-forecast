@@ -12,11 +12,21 @@ class TESModel(BaseModel):
 
     def fit_forecast(self, df: pd.DataFrame) -> dict:
         series = df["qty_sold"].fillna(0)
+
+        category = (
+            df["category"].iloc[0]
+            if "category" in df.columns and not df["category"].empty
+            else None
+        )
+        seasonal_period = self.cfg.category_seasonal_periods.get(
+            category, self.cfg.default_seasonal_period
+        )
+
         model = ExponentialSmoothing(
             series,
             trend="add",
             seasonal="add",
-            seasonal_periods=7,
+            seasonal_periods=seasonal_period,
         ).fit()
         fitted = model.fittedvalues
         rmse = mean_squared_error(series, fitted, squared=False)
