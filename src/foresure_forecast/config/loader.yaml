@@ -1,0 +1,4 @@
+lead_time_days: 14
+reorder_cycle_days: 30
+forecast_horizon_days: 90
+models_to_run: [SES, DES, TES]
