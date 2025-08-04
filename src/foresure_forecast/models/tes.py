@@ -42,6 +42,5 @@ from __future__ import annotations
          )
          return {"name": self.name, "rmse": rmse, "mape": mape, "forecast": forecast}
  
- 
 MODEL_REGISTRY[TESModel.name] = TESModel
 
