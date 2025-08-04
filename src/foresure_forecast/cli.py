@@ -10,8 +10,9 @@ app = typer.Typer()
 
 @app.command()
 def run(
-    sales: Path = typer.Argument(
+    sales: Path = typer.Option(
         Path("data/fact_forecast_input.csv"),
+        "--sales", "-s",
         exists=True,
         file_okay=True,
         dir_okay=False,
@@ -19,6 +20,7 @@ def run(
         help="Path to your fact_forecast_input CSV"
     )
 ):
+    orchestration.run(str(sales))
     """
     Run the full forecasting pipeline.
     If you don’t supply --sales, it defaults to data/fact_forecast_input.csv
