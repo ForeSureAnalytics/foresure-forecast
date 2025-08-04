@@ -69,8 +69,17 @@ cd ForeSure-Forecast
 conda create -n forecast_env python=3.11
 conda activate forecast_env
 
-# Install dependencies
-pip install -r requirements.txt
+# Install the package (provides the `foresure-forecast` command)
+pip install -e .
 
 # Run your first forecast
-python forecast_engine.py --sales ./data/sales_history.csv
+foresure-forecast --sales ./data/sales_history.csv
+```
+
+## Usage Examples
+
+After installation, the package exposes a `foresure-forecast` command line tool:
+
+```bash
+foresure-forecast --help
+```
