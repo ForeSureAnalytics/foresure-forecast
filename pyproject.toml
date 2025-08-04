@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foresure-forecast"
+version = "0.1.0"
+description = "ForeSure-Forecast"
+authors = [{name = "Unknown"}]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+include = ["foresure_forecast*"]
+
+[tool.setuptools.package-data]
+"foresure_forecast.config" = ["*.yaml"]

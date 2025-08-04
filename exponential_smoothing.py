@@ -6,7 +6,7 @@ from pathlib import Path
 from statsmodels.tsa.holtwinters import SimpleExpSmoothing, ExponentialSmoothing
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 
-from config.forecast_config import generate_forecast_config
+from foresure_forecast.config.forecast_config import generate_forecast_config
 
 # === Load Data ===
 def load_forecast_input(filepath):
