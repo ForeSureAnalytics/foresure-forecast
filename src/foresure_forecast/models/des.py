@@ -33,4 +33,4 @@ class DESModel(BaseModel):
         }
 
 
-MODEL_REGISTRY[DESModel.name] = DES
+MODEL_REGISTRY[DESModel.name] = DESModel

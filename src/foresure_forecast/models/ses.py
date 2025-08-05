@@ -33,4 +33,4 @@ class SESModel(BaseModel):
         }
 
 
-MODEL_REGISTRY[SESModel.name] = SES
+MODEL_REGISTRY[SESModel.name] = SESModel
