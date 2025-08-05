@@ -15,6 +15,7 @@ src/foresure_forecast/evaluation/metrics.py
 src/foresure_forecast/features/build_features.py
 src/foresure_forecast/io/load_csv.py
 src/foresure_forecast/io/write_forecast.py
+src/foresure_forecast/models/__init__.py
 src/foresure_forecast/models/base.py
 src/foresure_forecast/models/des.py
 src/foresure_forecast/models/ses.py
