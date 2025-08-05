@@ -10,7 +10,3 @@ if not logger.handlers:
 
 __all__ = ["logger"]
 
-# Import these so their top‐level registration runs
-from .ses import SESModel
-from .des import DESModel
-from .tes import TESModel
