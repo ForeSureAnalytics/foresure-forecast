@@ -9,3 +9,8 @@ if not logger.handlers:
     logger.setLevel(logging.INFO)
 
 __all__ = ["logger"]
+
+# Import these so their top‐level registration runs
+from .ses import SESModel
+from .des import DESModel
+from .tes import TESModel
