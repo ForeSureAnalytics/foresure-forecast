@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import pandas as pd
-from sklearn.metrics import mean_absolute_percentage_error, mean_squared_error
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 from .base import BaseModel, MODEL_REGISTRY
+from .utils import mape, rmse
 
 
 class TESModel(BaseModel):
@@ -21,7 +21,7 @@ class TESModel(BaseModel):
         seasonal_period = self.cfg.category_seasonal_periods.get(
             category, self.cfg.default_seasonal_period
         )
- 
+
         model = ExponentialSmoothing(
             series,
             trend="add",
@@ -44,9 +44,8 @@ class TESModel(BaseModel):
             "name": self.name,
             "rmse": rmse_val,
             "mape": mape_val,
-            "forecast": forecast
+            "forecast": forecast,
         }
 
 
 MODEL_REGISTRY[TESModel.name] = TESModel
-
