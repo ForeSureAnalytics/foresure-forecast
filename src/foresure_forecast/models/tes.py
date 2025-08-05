@@ -1,15 +1,15 @@
 from __future__ import annotations
- 
+
 import pandas as pd
 from sklearn.metrics import mean_absolute_percentage_error, mean_squared_error
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
- 
+
 from .base import BaseModel, MODEL_REGISTRY
 
 
 class TESModel(BaseModel):
     name = "TES"
- 
+
     def fit_forecast(self, df: pd.DataFrame) -> dict:
         series = df["qty_sold"].fillna(0)
 
@@ -40,7 +40,12 @@ class TESModel(BaseModel):
         forecast = pd.DataFrame(
             {"day_key": future_dates, "forecast_qty": forecast_vals}
         )
-        return {"name": self.name, "rmse": rmse_vale, "mape": mape_vale, "forecast": forecast}
+        return {
+            "name": self.name,
+            "rmse": rmse_val,
+            "mape": mape_val,
+            "forecast": forecast
+        }
 
 
 MODEL_REGISTRY[TESModel.name] = TESModel
