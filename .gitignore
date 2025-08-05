@@ -4,3 +4,7 @@ __pycache__/
 output/
 .env
 .venv
+
+# Ignore setuptools metadata
+src/foresure_forecast.egg-info/
+*.egg-info/
