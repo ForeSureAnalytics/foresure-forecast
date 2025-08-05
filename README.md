@@ -34,7 +34,7 @@ pip install -e .
 2. Place it in `data/` (e.g., `data/fact_forecast_input.csv`).
 3. Run forecasting:
    ```bash
-   python -m foresure_forecast.cli run \
+   python -m foresure_forecast.cli \
      --sales data/fact_forecast_input.csv \
      --output output/
    ```

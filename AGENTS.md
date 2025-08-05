@@ -19,7 +19,7 @@
   ```
 - **Run CLI:**
   ```bash
-  python -m foresure_forecast.cli run \
+  python -m foresure_forecast.cli \
     --sales data/fact_forecast_input.csv \
     --output "$FORECAST_OUTPUT_DIR"
   ```
