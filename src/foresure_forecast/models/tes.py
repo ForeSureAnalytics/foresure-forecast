@@ -43,5 +43,5 @@ from .base import BaseModel, MODEL_REGISTRY
          return {"name": self.name, "rmse": rmse, "mape": mape, "forecast": forecast}
 
 
-MODEL_REGISTRY[TESModel.name] = TESModel
+MODEL_REGISTRY[TESModel.name] = TES
 
