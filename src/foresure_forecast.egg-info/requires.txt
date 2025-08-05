@@ -1,0 +1,11 @@
+pandas
+numpy
+statsmodels
+scikit-learn
+typer
+PyYAML
+
+[dev]
+pytest
+ruff
+black

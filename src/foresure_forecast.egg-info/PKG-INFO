@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: foresure-forecast
+Version: 0.1.0
+Summary: Modular forecasting package
+Author-email: Douglas Davis <doug@foresureanalytics.com>
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: statsmodels
+Requires-Dist: scikit-learn
+Requires-Dist: typer
+Requires-Dist: PyYAML
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Dynamic: license-file
