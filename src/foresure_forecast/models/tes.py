@@ -29,8 +29,8 @@ class TESModel(BaseModel):
             seasonal_periods=seasonal_period,
         ).fit()
         fitted = model.fittedvalues
-        rmse = mean_squared_error(series, fitted, squared=False)
-        mape = mean_absolute_percentage_error(series, fitted)
+        rmse_val = rmse(series, fitted)
+        mape_val = mape(series, fitted)
         forecast_vals = model.forecast(self.cfg.forecast_horizon_days)
         future_dates = pd.date_range(
             start=df["day_key"].max() + pd.Timedelta(days=1),
@@ -40,7 +40,7 @@ class TESModel(BaseModel):
         forecast = pd.DataFrame(
             {"day_key": future_dates, "forecast_qty": forecast_vals}
         )
-        return {"name": self.name, "rmse": rmse, "mape": mape, "forecast": forecast}
+        return {"name": self.name, "rmse": rmse_vale, "mape": mape_vale, "forecast": forecast}
 
 
 MODEL_REGISTRY[TESModel.name] = TESModel
