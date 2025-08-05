@@ -1,2 +1,2 @@
 [console_scripts]
-foresure-forecast = foresure_forecast.cli.app
+foresure-forecast = foresure_forecast.cli:app
