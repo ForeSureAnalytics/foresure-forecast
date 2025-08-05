@@ -8,7 +8,7 @@ from foresure_forecast.orchestration import run as orchestration_run
 app = typer.Typer()
 
 # two levels up from this file is your repo root; adjust if your layout changes
-DEFAULT_SALES_PATH = Path(__file__).parents[2] / "data" / "fact_forecast_input.csv"
+DEFAULT_SALES_PATH = Path(__file__).parents[3] / "data" / "fact_forecast_input.csv"
 
 @app.command()
 def run(
