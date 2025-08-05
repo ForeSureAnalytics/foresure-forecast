@@ -5,8 +5,8 @@ from sklearn.metrics import mean_absolute_percentage_error, mean_squared_error
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
  
 from .base import BaseModel, MODEL_REGISTRY
- 
- 
+
+
 class TESModel(BaseModel):
     name = "TES"
  
