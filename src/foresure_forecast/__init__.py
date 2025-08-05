@@ -9,4 +9,3 @@ if not logger.handlers:
     logger.setLevel(logging.INFO)
 
 __all__ = ["logger"]
-
