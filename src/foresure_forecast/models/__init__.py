@@ -9,4 +9,4 @@ from .des import DESModel
 from .tes import TESModel
 
 # (Optionally) expose them on the package level
-__all__ = ["SESModel", "DESModel", "TESModel"]
+__all__ = ["SESModel", "DESModel", "TESModel", "BaseModel", "MODEL_REGISTRY"]
